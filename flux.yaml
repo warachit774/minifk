@@ -110,13 +110,8 @@ items:
         containers:
         - args:
           - --ssh-keygen-dir=/var/fluxd/keygen
-<<<<<<< HEAD
           - --git-url=https://github.com/warachit774/minifk
           - --git-branch=master
-=======
-          - --git-url=https://github.com/warachit774/minifk
-          - --git-branch=master
->>>>>>> e89bb7ba3ff4d6f484f7fd901a9919ce067047cb
           - --git-poll-interval=30s
           - --git-path=.
           - --git-readonly
