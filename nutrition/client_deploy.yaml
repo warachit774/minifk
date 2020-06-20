@@ -1,14 +1,12 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  generation: 1
   labels:
     app: client
   name: client
   namespace: default
-  resourceVersion: "6579"
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: client
@@ -24,10 +22,9 @@ spec:
     spec:
       containers:
       - image: warachit774/client
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: client
-        terminationMessagePath: /dev/termination-log
-        terminationMessagePolicy: File
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
+      terminationGracePeriodSeconds: 30

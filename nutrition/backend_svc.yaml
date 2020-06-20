@@ -5,13 +5,12 @@ metadata:
     app: backend
   name: backend
   namespace: default
-  resourceVersion: "6682"
 spec:
   externalTrafficPolicy: Cluster
   ports:
-  - port: 8081
+  - port: 9000
     protocol: TCP
-    targetPort: 8081
+    targetPort: 9000
   selector:
     app: backend
   sessionAffinity: None
