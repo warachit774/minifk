@@ -21,7 +21,7 @@ spec:
         app: client
     spec:
       containers:
-              - image: warachit774/client:v0.1
+      - image: warachit774/client:v0.1
         imagePullPolicy: IfNotPresent
         name: client
       dnsPolicy: ClusterFirst

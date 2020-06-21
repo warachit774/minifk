@@ -21,7 +21,7 @@ spec:
         app: backend
     spec:
       containers:
-              - image: warachit774/backend:v0.1
+      - image: warachit774/backend:v0.1
         imagePullPolicy: IfNotPresent
         name: backend
       dnsPolicy: ClusterFirst
