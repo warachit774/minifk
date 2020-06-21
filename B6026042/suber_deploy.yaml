@@ -5,7 +5,7 @@ metadata:
   labels:
     app: suber
   name: suber
-  namespace: default
+  namespace: b6026042
 spec:
   replicas: 1
   selector:
