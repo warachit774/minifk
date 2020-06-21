@@ -2,14 +2,14 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    app: client
-  name: client
-  namespace: default
+    app: front
+  name: front
+  namespace: B6026042
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: client
+      app: front
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -18,12 +18,12 @@ spec:
   template:
     metadata:
       labels:
-        app: client
+        app: front
     spec:
       containers:
-      - image: warachit774/client:v0.1
+      - image: chanwit/front
         imagePullPolicy: IfNotPresent
-        name: client
+        name: front
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
