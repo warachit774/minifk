@@ -4,7 +4,7 @@ metadata:
   labels:
     app: front
   name: front
-  namespace: B6026042
+  namespace: default
 spec:
   replicas: 1
   selector:
@@ -22,9 +22,10 @@ spec:
     spec:
       containers:
       - image: chanwit/front
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         name: front
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
+      securityContext: {}
       terminationGracePeriodSeconds: 30
